@@ -1,7 +1,7 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 import { Home } from "./pages/Home";
-import { Login } from "./pages/Login";
-import { Signup } from "./pages/Signup";
+import { Login } from "./pages/login/Login";
+import { Signup } from "./pages/signup/Signup";
 import { OrderHistory } from "./pages/OrderHistory";
 import { Search } from "./pages/Search";
 import { Profile } from "./pages/Profile";

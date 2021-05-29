@@ -1,11 +1,22 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Loader } from "./components/Loader";
 import { useRoutes } from "./routes";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  selectAuthenticated,
+  selectAuthLoading,
+  userLogin,
+} from "./reduxToolkit/api/authSlice";
 
 function App() {
-  const isAuthenticated = true;
-  const loading = false;
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector(selectAuthenticated);
+  const loading = useSelector(selectAuthLoading);
+
+  useEffect(() => {
+    dispatch(userLogin());
+  }, [dispatch]);
 
   const routes = useRoutes(isAuthenticated);
   return (

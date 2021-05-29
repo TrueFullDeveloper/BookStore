@@ -19,7 +19,7 @@ export const fetchLogin = createAsyncThunk(
         })
       );
 
-      return payload;
+      return 10; // TODO: Here Should Be res.userId
     } catch (e) {
       console.log(e.message);
     }
@@ -42,7 +42,7 @@ export const fetchSignup = createAsyncThunk(
         })
       );
 
-      return payload;
+      return 10; // TODO: Here Should Be res.userId
     } catch (e) {
       console.log(e.message);
     }
