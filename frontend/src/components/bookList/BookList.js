@@ -10,7 +10,7 @@ export const BookList = ({ bookItems }) => {
 
   const onClick = () => {
     const payload = {
-      bookTitle: "Python. Карманный справочник",
+      bookTitle: "Python.Карманный справочник",
       bookCost: 312,
       pageNumber: "900",
       bookISBN: "978-5-6045889-7-0",
@@ -20,22 +20,26 @@ export const BookList = ({ bookItems }) => {
       bookStatus: true,
       bookAuthor: "Марк Луц",
       bookGenre: "Ужасы",
-      bookRating: 5,
+      bookRating: 4,
+      bookPublisher: "Вильямсий Издательский дом",
+      bookDescription:
+        "Этот краткий справочник по Python карманного типа обновлен с учетом версий 3.4 и 2.7 и очень удобен для наведения быстрых справок в процессе разработки программ на Python. В лаконичной форме здесь представлены все необходимые сведения о типах данных и операторах Python, специальных методах, встроенных функциях и исключениях, наиболее употребительных стандартных библиотечных модулях и других примечательных языковых средствах Python",
     };
+
     dispatch(setBook(payload));
   };
   return (
     <div className={styles.response_section}>
       {bookItems.map((bookItem, index) => (
         <div className={styles.card} key={index}>
-          <NavLink to="/Book" onClick={() => onClick()}>
+          <NavLink to="/book" onClick={() => onClick()}>
             <div className={styles.top_section}>
               <img src={fakeBook} alt="" />
             </div>
           </NavLink>
 
           <div className={styles.info_section}>
-            <NavLink to="/Book" onClick={() => onClick()}>
+            <NavLink to="/book" onClick={() => onClick()}>
               <h2>
                 <div className={styles.filledbar_3}></div>
                 <div className={styles.filledbar_2}></div>

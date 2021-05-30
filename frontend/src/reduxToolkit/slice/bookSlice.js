@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const bookSlice = createSlice({
   name: "book",
   initialState: {
-    bookTitle: null,
+    bookTitle: "Some Shit",
     bookCost: null,
     pageNumber: null,
     bookISBN: null,
@@ -14,6 +14,8 @@ const bookSlice = createSlice({
     bookAuthor: null,
     bookGenre: null,
     bookRating: null,
+    bookPublisher: null,
+    bookDescription: null,
   },
 
   reducers: {
@@ -32,6 +34,8 @@ const bookSlice = createSlice({
           bookAuthor,
           bookGenre,
           bookRating,
+          bookPublisher,
+          bookDescription,
         },
       }
     ) {
@@ -46,10 +50,8 @@ const bookSlice = createSlice({
       state.bookAuthor = bookAuthor;
       state.bookGenre = bookGenre;
       state.bookRating = bookRating;
-    },
-
-    hideLabel(state) {
-      state.visible = false;
+      state.bookPublisher = bookPublisher;
+      state.bookDescription = bookDescription;
     },
   },
 });
@@ -57,17 +59,19 @@ const bookSlice = createSlice({
 export const { setBook } = bookSlice.actions;
 
 export const selectBook = state => ({
-  bookTitle: state.bookTitle,
-  bookCost: state.bookCost,
-  pageNumber: state.pageNumber,
-  bookISBN: state.bookISBN,
-  pubData: state.pubData,
-  bookEdition: state.bookEdition,
-  bookWeight: state.bookWeight,
-  bookStatus: state.bookStatus,
-  bookAuthor: state.bookAuthor,
-  bookGenre: state.bookGenre,
-  bookRating: state.bookRating,
+  bookTitle: state.book.bookTitle,
+  bookCost: state.book.bookCost,
+  pageNumber: state.book.pageNumber,
+  bookISBN: state.book.bookISBN,
+  pubData: state.book.pubData,
+  bookEdition: state.book.bookEdition,
+  bookWeight: state.book.bookWeight,
+  bookStatus: state.book.bookStatus,
+  bookAuthor: state.book.bookAuthor,
+  bookGenre: state.book.bookGenre,
+  bookRating: state.book.bookRating,
+  bookPublisher: state.book.bookPublisher,
+  bookDescription: state.book.bookDescription,
 });
 
 export default bookSlice.reducer;

@@ -1,0 +1,224 @@
+@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+
+.book_block {
+  position: relative;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+.book_block h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 50px;
+  font-size: 28px;
+  color: #fdfdfd;
+}
+
+.first_book_section img {
+  width: 300px;
+  height: 500px;
+}
+
+.first_book_section button {
+  position: absolute;
+  top: 700px;
+  left: 200px;
+  background: #0f1128;
+  border-radius: 10px;
+  width: 208px;
+  height: 45px;
+  border: none;
+}
+
+.first_book_section button:hover {
+  background: #151736;
+}
+
+.first_book_section button a {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #f3f3f3;
+  text-transform: uppercase;
+}
+
+.second_book_section {
+  margin-top: -120px;
+}
+.second_book_section h2 {
+  margin-top: -10px;
+  margin-left: -545px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: #52616e;
+}
+
+.second_book_section h3 {
+  margin-top: -10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.second_book_section ul {
+  list-style: none;
+  text-decoration: none;
+  margin: auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  margin-left: -37px;
+}
+
+.book_data {
+  margin-top: 50px;
+  width: 644px;
+  height: 200px;
+}
+
+.grey_color {
+  color: #52616f;
+}
+
+.white_color {
+  color: #e4e4e4;
+}
+
+.book_data .white_color {
+  margin-left: 120px;
+  margin-top: -169px;
+}
+
+.annotation {
+  position: relative;
+  width: 70%;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.annotation h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 22px;
+  color: #52616f;
+}
+
+.annotation p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: -10px;
+  color: #e4e4e4;
+}
+
+.border {
+  width: 30px;
+  height: 3px;
+  background: #778beb;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+}
+
+.cost_section h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-left: auto;
+  letter-spacing: 0.05em;
+  text-align: justify;
+  color: #fdfdfd;
+}
+
+.cost_section button {
+  transition: 0.25s;
+  background: #303bd5;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  height: 50px;
+  width: 150px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 20px;
+
+  margin-top: 6px;
+}
+.cost_section button:hover {
+  transform: scale(1.1);
+}
+
+.cost_section button a {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.stars {
+  margin-right: 547px;
+  direction: rtl;
+}
+
+.stars a {
+  font-size: 18px;
+  color: #778beb;
+  transition: 0.3s all;
+}
+
+.stars a:hover {
+  color: #f1c40f;
+}
+
+.s1:hover ~ a {
+  color: #f1c40f;
+}
+
+.s2:hover ~ a {
+  color: #f1c40f;
+}
+
+.s3:hover ~ a {
+  color: #f1c40f;
+}
+
+.s4:hover ~ a {
+  color: #f1c40f;
+}
+
+.s5:hover ~ a {
+  color: #f1c40f;
+}

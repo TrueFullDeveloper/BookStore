@@ -1,5 +1,12 @@
-import React from "react";
+import React, { Fragment, useEffect } from "react";
+import { Footer } from "../components/footer/Footer";
+import { BookDescription } from "../components/bookDescription/BookDescription";
 
 export const Book = () => {
-  return <div>Book</div>;
+  return (
+    <Fragment>
+      <BookDescription />
+      <Footer />
+    </Fragment>
+  );
 };

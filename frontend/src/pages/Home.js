@@ -2,8 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import { SearchForm } from "../components/searchForm/SearchForm";
 import { BookList } from "../components/bookList/BookList";
 import { Loader } from "../components/loader/Loader";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   fetchResponse,
   selectResponseList,

@@ -17,7 +17,7 @@ export const useRoutes = isAuthenticated => {
         <Route path={"/search"} exact component={Search} />
         <Route path={"/profile"} exact component={Profile} />
         <Route path={"/basket"} exact component={Basket} />
-        <Route path={"/Book"} exact component={Book} />
+        <Route path={"/book"} exact component={Book} />
         <Redirect to="/" />
       </Switch>
     );
