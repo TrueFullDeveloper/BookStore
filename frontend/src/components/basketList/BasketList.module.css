@@ -1,0 +1,82 @@
+.history_block {
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 945px;
+}
+
+.history_block h1 {
+  margin-left: 35px;
+  margin-top: 25px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #fffbfb;
+}
+
+.history_item {
+  position: relative;
+  display: flex;
+  border: 0;
+  outline: none;
+  width: 945px;
+  height: 250px;
+  border-radius: 2px;
+  background: #171717;
+  border-bottom: 1px solid #2d2d2d;
+  /* justify-content: space-between; */
+  transition: 0.35s;
+}
+
+.history_item img {
+  width: 120px;
+  height: 200px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.history_item h2 {
+  margin-top: 60px;
+  margin-left: -108px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #7e7e7e;
+}
+
+.history_item button {
+  background: url(../../static/images/basket/close.svg) no-repeat;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  border: none;
+  margin-left: 570px;
+  margin-top: 80px;
+}
+
+.history_item button:hover {
+  background: url(../../static/images/basket/close_hover.svg) no-repeat;
+  transform: scale(1.15);
+}
+
+.history_item:hover {
+  background: #2d2d2d;
+}
+
+.book_cost {
+  margin-top: 100px;
+  margin-left: -85px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #dbd9d9;
+}

@@ -52,7 +52,7 @@ export const BookList = ({ bookItems }) => {
             <p>Марк Луц</p>
             <div className={styles.cost_section}>
               <h2>
-                600 ₽<div className={styles.border}></div>
+                312 ₽<div className={styles.border}></div>
               </h2>
               <button>
                 <a href="#">Купить</a>
