@@ -11,7 +11,7 @@ import {
 import { Footer } from "../components/footer/Footer";
 
 export const Basket = () => {
-  const [basketListState, setBasketList] = useState(false); // Издалека похоже на костыль(
+  const [basketListState, setBasketList] = useState(false);
 
   const loading = useSelector(selectBasketLoading);
   const basketList = useSelector(selectBasket);

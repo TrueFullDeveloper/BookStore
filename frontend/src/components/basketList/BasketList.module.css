@@ -1,11 +1,11 @@
-.history_block {
+.basket_block {
   margin-top: 150px;
   margin-left: auto;
   margin-right: auto;
   width: 945px;
 }
 
-.history_block h1 {
+.basket_block h1 {
   margin-left: 35px;
   margin-top: 25px;
   font-family: Roboto;
@@ -17,7 +17,62 @@
   color: #fffbfb;
 }
 
-.history_item {
+.basket_block h5 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #e08b0b;
+}
+
+.basket_block img {
+  height: 150px;
+  width: 150px;
+}
+
+.basket_block button {
+  float: left;
+  transition: 0.25s;
+  background: #303bd5;
+  border: 0;
+  outline: none;
+  height: 50px;
+  width: 300px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  text-transform: uppercase;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.basket_block button a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.basket_block button:hover {
+  transform: scale(1.1);
+}
+
+.basket_block h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #fffbfb;
+}
+
+.basket_item {
   position: relative;
   display: flex;
   border: 0;
@@ -31,14 +86,14 @@
   transition: 0.35s;
 }
 
-.history_item img {
+.basket_item img {
   width: 120px;
   height: 200px;
   margin-top: 25px;
   margin-left: 25px;
 }
 
-.history_item h2 {
+.basket_item h2 {
   margin-top: 60px;
   margin-left: -108px;
   font-family: Roboto;
@@ -50,7 +105,7 @@
   color: #7e7e7e;
 }
 
-.history_item button {
+.basket_item button {
   background: url(../../static/images/basket/close.svg) no-repeat;
   width: 90px;
   height: 90px;
@@ -60,12 +115,12 @@
   margin-top: 80px;
 }
 
-.history_item button:hover {
+.basket_item button:hover {
   background: url(../../static/images/basket/close_hover.svg) no-repeat;
   transform: scale(1.15);
 }
 
-.history_item:hover {
+.basket_item:hover {
   background: #2d2d2d;
 }
 
