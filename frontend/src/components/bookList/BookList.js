@@ -6,8 +6,8 @@ import { NavLink } from "react-router-dom";
 export const BookList = ({ bookItems }) => {
   return (
     <div className={styles.response_section}>
-      {bookItems.map(bookItem => (
-        <div className={styles.card}>
+      {bookItems.map((bookItem, index) => (
+        <div className={styles.card} key={index}>
           <NavLink
             to="/Book"
             onClick={() => {
