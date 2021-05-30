@@ -6,6 +6,7 @@ import { Basket } from "./pages/Basket";
 import { OrderHistory } from "./pages/OrderHistory";
 import { Search } from "./pages/Search";
 import { Profile } from "./pages/Profile";
+import { Book } from "./pages/Book";
 
 export const useRoutes = isAuthenticated => {
   if (isAuthenticated) {
@@ -16,6 +17,7 @@ export const useRoutes = isAuthenticated => {
         <Route path={"/search"} exact component={Search} />
         <Route path={"/profile"} exact component={Profile} />
         <Route path={"/basket"} exact component={Basket} />
+        <Route path={"/Book"} exact component={Book} />
         <Redirect to="/" />
       </Switch>
     );

@@ -82,6 +82,13 @@
   cursor: pointer;
 }
 
+.info_section a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+}
+
 h2 {
   position: relative;
   font-weight: 700;

@@ -6,14 +6,26 @@ import { NavLink } from "react-router-dom";
 export const BookList = ({ bookItems }) => {
   return (
     <div className={styles.response_section}>
-      {bookItems.map(youtubeItem => (
-        <NavLink to="/profile">
-          <div className={styles.card}>
+      {bookItems.map(bookItem => (
+        <div className={styles.card}>
+          <NavLink
+            to="/Book"
+            onClick={() => {
+              console.log("Book Click");
+            }}
+          >
             <div className={styles.top_section}>
               <img src={fakeBook} alt="" />
             </div>
+          </NavLink>
 
-            <div className={styles.info_section}>
+          <div className={styles.info_section}>
+            <NavLink
+              to="/Book"
+              onClick={() => {
+                console.log("Book Click");
+              }}
+            >
               <h2>
                 <div className={styles.filledbar_3}></div>
                 <div className={styles.filledbar_2}></div>
@@ -22,19 +34,18 @@ export const BookList = ({ bookItems }) => {
                 <div className={styles.filledbar}></div>
                 <div className={styles.filledbar_4}></div>
               </h2>
-              <p>Марк Луц</p>
-              <div className={styles.cost_section}>
-                <h2>
-                  600 ₽<div className={styles.border}></div>
-                  {/* <div className={styles.filledbar}></div> */}
-                </h2>
-                <button>
-                  <a href="#">Купить</a>
-                </button>
-              </div>
+            </NavLink>
+            <p>Марк Луц</p>
+            <div className={styles.cost_section}>
+              <h2>
+                600 ₽<div className={styles.border}></div>
+              </h2>
+              <button>
+                <a href="#">Купить</a>
+              </button>
             </div>
           </div>
-        </NavLink>
+        </div>
       ))}
     </div>
   );
