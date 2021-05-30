@@ -10,6 +10,7 @@ import {
   selectSearchLoading,
 } from "../reduxToolkit/api/searchSlice";
 import { Header } from "../components/header/Header";
+import { Footer } from "../components/footer/Footer";
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ export const Home = () => {
       ) : (
         <Fragment>
           <BookList bookItems={responseList} />
+          <Footer />
         </Fragment>
       )}
     </Fragment>
