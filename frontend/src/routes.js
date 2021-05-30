@@ -7,6 +7,7 @@ import { OrderHistory } from "./pages/OrderHistory";
 import { Search } from "./pages/Search";
 import { Profile } from "./pages/Profile";
 import { Book } from "./pages/Book";
+import { Order } from "./pages/Order";
 
 export const useRoutes = isAuthenticated => {
   if (isAuthenticated) {
@@ -18,6 +19,7 @@ export const useRoutes = isAuthenticated => {
         <Route path={"/profile"} exact component={Profile} />
         <Route path={"/basket"} exact component={Basket} />
         <Route path={"/book"} exact component={Book} />
+        <Route path={"/order"} exact component={Order} />
         <Redirect to="/" />
       </Switch>
     );

@@ -49,7 +49,7 @@ export const BasketList = ({ basketList, onRemove }) => {
         <Fragment>
           <h4>Общая стоимость: {totalCost} ₽</h4>
           <button>
-            <Link to="/">Офомить заказ</Link>
+            <Link to="/order">Офомить заказ</Link>
           </button>
         </Fragment>
       )}
