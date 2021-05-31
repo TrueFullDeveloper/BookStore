@@ -2,6 +2,21 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+class Publisher(models.Model):
+    publisher_title = models.CharField(
+        'Main Title', default='Book_Title', max_length=20, help_text="M_Title")
+
+    publisher_phone = models.CharField(
+        'Main Title', default='Book_ISBN', max_length=20, help_text="M_Title")
+
+    publisher_address = models.CharField(
+        'Main Title', default='Sheet_Page_Number', max_length=20, help_text="M_Title")
+
+    def __str__(self):
+
+        return self.publisher_title
+
+
 class Book(models.Model):
     book_title = models.CharField(
         'Main Title', default='Book_Title', max_length=20, help_text="M_Title")
@@ -27,6 +42,8 @@ class Book(models.Model):
     is_available = models.BooleanField(default=True)
 
     pub_date = models.DateField('Pub date')
+
+    publisher = models.ForeignKey(Publisher)
 
     def __str__(self):
 
@@ -74,21 +91,19 @@ class Rating(models.Model):
         return self.genre_title
 
 
-class Publisher(models.Model):
-    publisher_title = models.CharField(
+class DeliveryCompany(models.Model):
+    delivery_company_title = models.CharField(
         'Main Title', default='Book_Title', max_length=20, help_text="M_Title")
 
-    publisher_phone = models.CharField(
+    delivery_company_phone = models.CharField(
         'Main Title', default='Book_ISBN', max_length=20, help_text="M_Title")
 
-    publisher_address = models.CharField(
-        'Main Title', default='Sheet_Page_Number', max_length=20, help_text="M_Title")
-
-    book = models.ForeignKey(Book)
+    delivery_cost = models.FloatField(
+        'Cost', default='Book_Cost', max_length=25, help_text="Book Cost")
 
     def __str__(self):
 
-        return self.publisher_title
+        return self.delivery_company_title
 
 
 class Order(models.Model):
@@ -105,6 +120,8 @@ class Order(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     book = models.ManyToManyField(Book)
+    delivery_company = models.ForeignKey(
+        DeliveryCompany, on_delete=models.CASCADE)
 
     def __str__(self):
 
