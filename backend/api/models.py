@@ -89,3 +89,23 @@ class Publisher(models.Model):
     def __str__(self):
 
         return self.publisher_title
+
+
+class Order(models.Model):
+    order_number = models.CharField(
+        'Main Title', default='Book_Title', max_length=20, help_text="M_Title")
+
+    total_cost = models.FloatField(
+        'Cost', default='Book_Cost', max_length=25, help_text="Book Cost")
+
+    is_completed = models.BooleanField(default=False)
+
+    completed_on = models.DateTimeField(null=True, blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    book = models.ManyToManyField(Book)
+
+    def __str__(self):
+
+        return self.order_number
