@@ -10,6 +10,10 @@ class Publisher(models.Model):
     publisher_address = models.CharField(
         'Publisher Address', default='Publisher_Address', max_length=20, )
 
+    class Meta:
+        verbose_name = 'Издательство'
+        verbose_name_plural = 'Издательства'
+
     def __str__(self):
 
         return self.publisher_title
@@ -23,6 +27,10 @@ class Author(models.Model):
     author_third_name = models.CharField(
         'Author Third Name', default='NULL', max_length=20, )
 
+    class Meta:
+        verbose_name = 'Автор'
+        verbose_name_plural = 'Авторы'
+
     def __str__(self):
 
         return self.author_first_name
@@ -31,6 +39,10 @@ class Author(models.Model):
 class Genre(models.Model):
     genre_title = models.CharField(
         'Genre Title', default='NULL', max_length=20, )
+
+    class Meta:
+        verbose_name = 'Жанр'
+        verbose_name_plural = 'Жанры'
 
     def __str__(self):
 
@@ -41,6 +53,10 @@ class Rating(models.Model):
     rating = models.IntegerField(
         'Rating', default=0,)
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'Оценка'
+        verbose_name_plural = 'Оценки'
 
     def __str__(self):
 
@@ -70,6 +86,10 @@ class Book(models.Model):
     publisher = models.ForeignKey(
         Publisher, on_delete=models.SET_NULL, null=True)
 
+    class Meta:
+        verbose_name = 'Книга'
+        verbose_name_plural = 'Книги'
+
     def __str__(self):
 
         return self.book_title
@@ -82,6 +102,10 @@ class DeliveryCompany(models.Model):
         'Delivery Company Phone', default='NULL', max_length=20, )
     delivery_cost = models.FloatField(
         'Delivery Cost', default=0,)
+
+    class Meta:
+        verbose_name = 'Доставщик'
+        verbose_name_plural = 'Доставщики'
 
     def __str__(self):
 
@@ -100,6 +124,10 @@ class Order(models.Model):
     delivery_company = models.ForeignKey(
         DeliveryCompany, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
+
     def __str__(self):
 
         return self.order_number
@@ -112,6 +140,10 @@ class Feedback(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name = 'Отзыв'
+        verbose_name_plural = 'Отзывы'
+
     def __str__(self):
 
         return self.created_at
@@ -122,6 +154,10 @@ class Basket(models.Model):
         'Basket Number', default='NULL', max_length=3000, )
     book = models.ManyToManyField(Book)
     creator = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'Корзина'
+        verbose_name_plural = 'Корзины'
 
     def __str__(self):
 
