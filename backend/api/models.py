@@ -48,3 +48,14 @@ class Author(models.Model):
     def __str__(self):
 
         return self.author_first_name
+
+
+class Genre(models.Model):
+    genre_title = models.CharField(
+        'Main Title', default='Book_Title', max_length=20, help_text="M_Title")
+
+    book = models.ManyToManyField(Book)
+
+    def __str__(self):
+
+        return self.genre_title
