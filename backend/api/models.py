@@ -126,3 +126,17 @@ class Order(models.Model):
     def __str__(self):
 
         return self.order_number
+
+
+class Feedback(models.Model):
+    feedback_text = models.CharField(
+        'Main Title', default='Book_Title', max_length=3000, help_text="M_Title")
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    creator = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+
+        return self.order_number
