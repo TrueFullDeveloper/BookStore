@@ -139,4 +139,16 @@ class Feedback(models.Model):
 
     def __str__(self):
 
-        return self.order_number
+        return self.created_at
+
+
+class Basket(models.Model):
+    basket_number = models.CharField(
+        'Main Title', default='Book_Title', max_length=3000, help_text="M_Title")
+
+    book = models.ManyToManyField(Book)
+    creator = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+
+        return self.basket_number
