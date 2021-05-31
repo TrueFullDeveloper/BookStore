@@ -24,8 +24,27 @@ class Book(models.Model):
     boook_cost = models.FloatField(
         'Cost', default='Book_Cost', max_length=25, help_text="Book Cost")
 
+    is_available = models.BooleanField(default=True)
+
     pub_date = models.DateField('Pub date')
 
     def __str__(self):
 
         return self.book_title
+
+
+class Author(models.Model):
+    author_first_name = models.CharField(
+        'Main Title', default='Book_Title', max_length=20, help_text="M_Title")
+
+    author_second_name = models.CharField(
+        'Main Title', default='Book_ISBN', max_length=20, help_text="M_Title")
+
+    author_third_name = models.CharField(
+        'Main Title', default='Sheet_Page_Number', max_length=20, help_text="M_Title")
+
+    book = models.ManyToManyField(Book)
+
+    def __str__(self):
+
+        return self.author_first_name
