@@ -68,7 +68,7 @@ export const ProfileForm = () => {
 
           <div>
             <button type="submit" onClick={() => onClick()}>
-              Сменить пароль
+              Сменить профиль
             </button>
             <button
               className={styles.logout_button}
