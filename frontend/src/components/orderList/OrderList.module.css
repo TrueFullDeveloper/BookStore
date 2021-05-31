@@ -1,0 +1,131 @@
+.basket_block {
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 945px;
+}
+
+.basket_block h1 {
+  margin-left: 25px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #fffbfb;
+}
+
+.basket_block img {
+  width: 200px;
+  height: 200px;
+}
+
+.basket_block h5 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #e08b0b;
+}
+
+.basket_block button {
+  float: left;
+  transition: 0.25s;
+  background: #dd2c2c;
+  border: 0;
+  outline: none;
+  height: 50px;
+  width: 300px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  text-transform: uppercase;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.basket_block button a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.basket_block button:hover {
+  transform: scale(1.1);
+}
+
+.basket_block h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #fffbfb;
+}
+
+.basket_item {
+  position: relative;
+  display: flex;
+  border: 0;
+  outline: none;
+  width: 945px;
+  height: 100px;
+  border-radius: 2px;
+  background: #171717;
+  border-bottom: 1px solid #2d2d2d;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.35s;
+}
+
+.basket_item h2 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #7e7e7e;
+}
+
+.basket_item button {
+  margin-right: 25px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  width: 180px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+}
+
+.basket_item button:hover {
+  transform: scale(1.15);
+}
+
+.basket_item:hover {
+  background: #2d2d2d;
+}
+
+.book_cost {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #dbd9d9;
+}
