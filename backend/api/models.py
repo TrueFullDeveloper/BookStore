@@ -59,3 +59,16 @@ class Genre(models.Model):
     def __str__(self):
 
         return self.genre_title
+
+
+class Rating(models.Model):
+    rating = models.IntegerField(
+        'Cost', default='Book_Cost', max_length=25, help_text="Book Cost")
+
+    book = models.ManyToManyField(Book)
+
+    creator = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+
+        return self.genre_title
