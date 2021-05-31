@@ -72,3 +72,20 @@ class Rating(models.Model):
     def __str__(self):
 
         return self.genre_title
+
+
+class Publisher(models.Model):
+    publisher_title = models.CharField(
+        'Main Title', default='Book_Title', max_length=20, help_text="M_Title")
+
+    publisher_phone = models.CharField(
+        'Main Title', default='Book_ISBN', max_length=20, help_text="M_Title")
+
+    publisher_address = models.CharField(
+        'Main Title', default='Sheet_Page_Number', max_length=20, help_text="M_Title")
+
+    book = models.ForeignKey(Book)
+
+    def __str__(self):
+
+        return self.publisher_title
